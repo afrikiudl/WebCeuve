@@ -1,0 +1,675 @@
+/* CSS Document */
+
+/*******************************************/
+
+
+
+/*******************************************/
+/*
+COLORES
+
+Rojo: #AE0000
+RosaFlojito (links): #D7636C
+Gris :#AE8B8B
+
+Taronja: #AE5700 (+30)
+RosaFuxia: #AE0057 (-30)
+Azul: #0057AE (-150)
+AzulComplementario: #00AEAE
+Verde: #00AE57 (+150)
+
+*/
+/*******************************************/
+/*
+	Elementos estandar del HTML
+*/
+
+html, body, #pagina {
+/* hacks para poner siempre el pie en la parte de abajo incluso en liquido*/
+    min-height: 100%; /* ancho minimom FF y Safari */
+    width: 100%;
+    height: 100%; /* alto minimo para IE Windows */
+    margin: 0;
+    padding: 0;
+
+}
+
+
+html {
+	color: #565656;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+
+body {
+	text-align: center; /*Para centrar la pagina en casi todos los navegadores*/
+	/*background: url(img/fondoPantalla.jpg) center no-repeat;*/
+	/*background-image: url(img/bkgRll.jpg);*/
+	background-image: url(img/bggre.jpg);	
+/*	background-repeat: repeat; */
+}
+
+body * {
+	margin: 0px;
+	padding: 0px;
+}
+
+
+/* Hipervinculos pagina principal */
+#contenidoIndex a {
+	margin: 0px;
+	text-decoration: none;
+	display: block;
+}
+#contenidoIndex a:link {
+	color: #565656; /*#9C9C9C;*/
+}
+#contenidoIndex a:visited {
+	color: #565656; /*#9C9C9C;*/
+}
+#contenidoIndex a:hover {
+	color: #AE0000;
+}
+#contenidoIndex a:active {
+	color: #AE0000;
+}
+
+#contenidoIndex a img {
+
+}
+
+/* Hipervinculos de todas la paginas*/
+
+#contenido a {
+	margin: 0px;
+	padding: 0px;
+	border-bottom: 1px dashed #AE0000;
+	text-decoration: none;
+	
+}
+#contenido a:link {
+	color: #AE0000;
+}
+#contenido a:visited {
+	color: #a30101; /*D7636C; */
+}
+#contenido a:hover {
+	color: #AE0000;
+	border-bottom: 1px solid #AE0000; 
+}
+#contenido a:active {
+	color: #D7636C;
+	border-bottom: 1px solid #AE0000; 
+}
+
+/* Hipervinculos PIe */
+#pie a {
+	margin: 0px;
+	text-decoration: none;
+}
+#pie a:link {
+	color: #D7636C; /*#9C9C9C;*/
+}
+#pie a:visited {
+	color: #D7636C; /*#9C9C9C;*/
+}
+#pie a:hover {
+	color: #FFFFFF;
+}
+#pie a:active {
+	color: #FFFFFF;
+}
+
+/*******************************************/
+
+
+/*	
+	Estructura del HTML - Pagina
+*/
+
+html>body #pagina {
+	height: auto; /* con este hack escondemos el min-height de IE*/
+}
+body {
+	text-align: center; 
+}
+#pagina {
+	height: auto !important; /* con este hack escondemos el min-height de IE*/ /*!important es para navegadores modernos*/
+}
+#pagina {
+	position: relative;
+    top: 0;
+    left: 0;
+	margin: 0px auto;
+	padding: 0px;
+	width: 750px;
+	text-align: left;
+	background:white;
+	border:1px solid #AE0000;
+}	
+
+/*
+#pagina { *7
+/*	height: auto !important; */ /* con este hack escondemos el min-height de IE*/ /*!important es para navegadores modernos*/
+/*	width: 740px;	
+	margin: 0px;
+	padding: 0px;
+	background: #AE0000;
+}*/
+
+/*******************************************/
+#cabecera_enRojo {
+	background: #AE0000;
+	padding: 0 0 5px 0;
+
+}
+#cabecera {
+/*
+	border: 1px solid #AE0000;
+	background: #AE0000;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	text-align: center;*/
+	border-bottom: 1px solid #AE0000;
+	border-left: 1px solid #AE0000;
+	border-top: 1px solid #AE0000;
+	/*border: 1px solid #AE0000; */
+	background: #AE0000; 
+	margin: 0px;
+	padding: 0 0 10px 0;
+	width: 100%;
+	/*background-color: #FFFFFF;*/
+}
+#linksSuperiores {
+	margin: 0px;
+	padding: 0px;
+}
+.home {
+	width: 21px;
+	height: 22px;
+	display: block;
+	background: url(img/home.jpg) top right no-repeat;
+	float: right;
+}
+.home:hover { 
+	width: 21px;
+	height: 22px;
+	display: block;
+	background: url(img/home_f.jpg) top right no-repeat;
+	float: right;
+}
+
+.contact {
+	width: 19px;
+	height: 22px;	
+	display: block;
+	background: url(img/contact.jpg) top right no-repeat;
+	float: right;
+}
+.contact:hover { 
+	width: 19px;
+	height: 22px;	
+	display: block;
+	background: url(img/contact_f.jpg) top right no-repeat;
+	float: right;
+}
+.mapaWeb {
+	width: 19px;
+	height: 22px;	
+	display: block;
+	background: url(img/mapaWeb.jpg) top right no-repeat;
+	float: right;
+}
+.mapaWeb:hover {
+	width: 19px;
+	height: 22px;	
+	display: block;
+	background: url(img/mapaWeb_f.jpg) top right no-repeat;
+	float: right;
+}
+/*******************************************/
+
+#logo {
+	float: left;
+}
+
+#logo a {
+	text-decoration: none;
+}
+
+#logo img {
+	border: 0px;
+}
+
+/*******************************************/
+
+#barramenu {
+	text-align: right ;
+	font-size:18px ;
+	margin: 8% 1% 0 0;
+}
+
+#barramenu li{
+	display: inline;
+	list-style-type: none;
+	color:#FFFFFF;
+}
+
+
+#barramenu a {
+	text-decoration: none;	
+}
+
+#barramenu a:link {
+	color: #D7636C;
+}
+#barramenu a:visited {
+	color: #D7636C;
+}
+#barramenu a:hover {
+	color: #FFFFFF;
+}
+#barramenu a:active {
+	color: #FFFFFF;
+}
+
+
+#pieMenu {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	
+	/*border-bottom: 1px dashed #F8E2EC;
+	border-top: 1px dashed #F8E2EC; */
+}
+
+
+#imgCabecera {
+	text-align: center; 
+	margin: 1px 0;
+/*		border: 1px solid #AE0000;*/
+}
+
+.lineaPuntos {	
+}
+/*******************************************/
+
+/* PAGINA INDEX */
+#contenidoIndex {
+/*	width: 95%; */
+	margin: 10px auto;
+/*	background-color: #fff; */
+	color: #333;
+	line-height: 130%;
+	text-align: center;
+}
+#contenidoIndex img {
+	border: 0px;
+}
+#contenidoIndex_izq {
+	float: left;
+	width: 220px;
+	margin: 0 0 0 10px;
+	padding: 0;/*1em;*/
+
+}
+#contenidoIndex_der {
+	float: right;
+	width: 220px;
+	margin: 0 10px 0 0;
+	padding: 0;/*1em;*/
+	
+}
+#contenidoIndex_mig {
+	/*margin-left: 220px;
+	margin-right: 200px;*/
+	padding: 2px 20px;/*1em;*/
+/*	max-width: 26em; */
+	margin: 0px 255px;
+	width: 190px;
+	display: block;
+  /*
+	border-left: 1px dashe #F8E2EC;
+	border-right: 1px dashed #F87E2EC;	
+*/
+}
+#contenidoIndex h2 {
+	padding: 5px 0;	
+	margin: 5px 0px;
+	color: #AE0000;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	border-bottom: 1px solid #F8E2EC;
+}
+
+#contenidoIndex p {
+	text-align: justify;
+	padding: 10px 15px;
+	font-size:x-small;
+}
+#contenidoIndex .tituloResaltar1 {
+	padding: 0;
+	margin: 0;
+	font-size: x-large;
+}
+#contenidoIndex .tituloResaltar2 {
+	padding: 0;
+	margin: 0;
+	font-size: large;
+}
+#contenidoIndex a {
+	margin: 10px 0 0 0;
+	width: 216px;
+	height: 201px;
+	text-decoration: none;
+	color: #565656;
+}
+#contenidoIndex a.imgInicio1 { background: url(img/imgInicio1.jpg) center no-repeat;}
+#contenidoIndex a.imgInicio1:hover { background: url(img/imgInicio1_f.jpg) center no-repeat;}
+
+#contenidoIndex a.imgInicio2 { background: url(img/imgInicio2.jpg) center no-repeat;}
+#contenidoIndex a.imgInicio2:hover { background: url(img/imgInicio2_f.jpg) center no-repeat;}
+
+#contenidoIndex a.imgInicio3 { background: url(img/imgInicio3.jpg) center no-repeat;}
+#contenidoIndex a.imgInicio3:hover { background: url(img/imgInicio3_f.jpg) center no-repeat;}
+
+/*#contenidoIndex  a:hover span {	visibility: visible;} */
+/*
+#contenidoIndex {
+
+	margin: 0px auto;
+	padding: 0px;
+	text-align: center;
+}
+#contenidoIndex ul li {
+	margin: 0px;
+	padding: 2px 5px;
+	list-style-type: none;
+	border: 1px solid #FFFFFF;
+	display: inline;
+}
+*/
+
+
+
+#migas {
+	padding:0 0 0 16px;
+}
+/*******************************************/
+
+#contenido {
+	width: 100%;
+	background-color:#FFFFFF;
+	margin: 10px auto;
+}
+
+#contenido_izq {
+/*	border-right: 1px solid #D7636C; */
+	text-align: justify;
+	margin: 0px;
+	padding: 0px 15px;
+	width: 500px;
+
+}
+
+#contenido_izq h2 {
+	margin: 20px 0px 5px 0px;
+	padding: 0px;
+	color: #AE0000;
+	text-align: left;
+	font-family: Arial, Helvetica, sans-serif;
+	border-bottom: 1px solid #F8E2EC;
+}
+
+#contenido_izq ul {
+	margin: 10px 0 0 0;
+	padding: 0px auto;
+}
+#contenido_izq ul li {
+	margin: 0px;
+	padding: 5px 0 5px 20px;
+	list-style-type: none;
+	text-align: left;
+}
+/*
+.contenido_izq ul li a {
+	margin: 0 0 0 10px;
+	padding: 0px;
+	display: block;
+	color: #565656;
+}
+*/
+#contenido_der {
+	margin: 0px;
+	padding: 0px;
+	float: right;
+	width: 180px;
+	border-left: 1px dashed #F8E2EC;
+}
+
+#contenido_der p {
+	margin: 0px;
+	padding: 5px;
+}
+
+#contenido_der h2 {
+	margin: 20px 0px 5px 0px;
+	padding: 0px;
+	color: #AE0000;/*D7636C;*/
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	border-bottom: 1px solid #F8E2EC;
+	font-size: small;
+}
+
+#contenido_der ul {
+	margin: 1px 0 0 0;
+	padding: 0px auto;
+}
+#contenido_der ul li {
+	margin: 0px 0px 0px 30px;
+	padding: 1px 0 1px 0px;
+	list-style-type: disc;
+	text-align: left;
+}
+/*
+.masLi { 
+margin: 0px 0px 0px 20px;
+background: url(img/mas.png) left no-repeat;
+}*/
+
+#contenido .tituloResaltar1 {
+	padding: 0;
+	margin: 0;
+	font-size: x-large;
+}
+#contenido .tituloResaltar2 {
+	padding: 0;
+	margin: 0;
+	font-size: large;
+}
+/*******************************************/
+
+
+/* PAGINA CONTACTO */
+
+
+
+/*******************************************/
+/* formulario */
+
+#formulario {
+	margin: 5px 0 0 50px;
+	padding: 0px;
+	color: #565656;/*#9C9C9C;*/
+	font-size: xx-small;	
+}
+
+#contenido form {
+	margin: 0px;
+	padding: 5px;
+}
+
+#contenido form fieldset {
+	clear: left;
+	margin: 5px 0;
+	padding: 5px 0;
+	width: 95%;
+	border: 1px solid #565656;
+}
+
+#contenido .formColumnas {
+	margin: 0px;
+	padding: 0px;
+	width: 98%;
+	height: 16px;
+}
+#contenido .elementoForm {
+	margin: 0px;
+	padding: 0px;
+	width: 49%;
+	height: 33px;
+	text-align: left;
+	float: left;
+	display: block;
+}
+
+.input , .textarea {
+	margin: 0px;
+	padding: 0px;
+	background-color: #FFFFFF;
+	border: 1px solid #D7636C; /*#AE8B8B; *//*#D3005F;*//*#0086D3;*//*#7BB727;*//*#F8E2EC;*/
+}
+.input {
+	width: 90%;
+	height: auto;
+}
+
+.textarea {
+	width: 91%;
+}
+
+
+.boton {
+	margin: 5px 22px 0 5px ;
+	padding: 2px;
+	font-weight: bold;
+	font-size: 12px;
+	border: 1px solid #AE0000;/*#F8E2EC;*/
+	background-color: #F8E2EC;
+	float: right;
+}
+.boton:hover {
+	font-weight: bold;
+	border: 1px solid #FFFFFF;/*#F8E2EC;*/
+	color: #FFFFFF;
+	background-color: #AE0000;
+}
+#contenido #pieFomulario {
+	margin-top: 10px;
+	color: #9C9C9C;
+}
+#contenido #pieFomulario ul {
+	margin: 0px;
+	padding: 0px;
+}
+#contenido #pieFomulario li {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+/* alerta del form */
+
+#msgErrNombre {
+	background: url(img/alert.png) center left no-repeat;
+	width: 16px;
+	height: 16px;
+	float: left;
+	display: block;
+	
+}
+#msgErrEmp {
+	background: url(img/alert.png) center no-repeat;
+	width: 16px;
+	height: 16px;
+	float: left;
+	display: block;
+}
+#msgErrEmail {
+	background: url(img/alert.png) center no-repeat;
+	width: 16px;
+	height: 16px;
+	float: left;
+	display: block;
+}
+#msgErrTelf {
+	background: url(img/alert.png) center no-repeat;
+	width: 16px;
+	height: 16px;
+	float: left;
+	display: block;
+}
+#msgErrMensaje {
+	background: url(img/alert.png) center no-repeat;
+	width: 16px;
+	height: 16px;
+	float: left;
+	display: block;
+}
+
+/*******************************************/
+/*	
+	Estructura del HTML - Pie
+*/
+
+#pie {
+	clear: both;
+    position: absolute;
+    bottom: 0;
+	width: 100%;/*80%;*/
+	margin: 10px 0px;
+	padding: 5px 0;	
+	text-align: center;
+	font-size: x-small; /*11px;*/
+	color: #FFFFFF;
+    background: #AE0000;
+
+}
+#pieIzq {
+	float: left;
+	padding: 0 0 0 30px;
+}
+
+#pieDer {
+	float: right; 
+	padding: 0 30px 0 0;	
+}
+
+#infoEmpresa {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+.css {
+	margin: 10px 0 0 0;
+	padding: 0px;
+	width: 88px;
+	height: 31px;
+	display: block;
+	background: url(img/validadorCSS1.png) center left no-repeat;
+	float: left;
+}
+.xhtml {
+	margin: 10px 0 0 0;
+	padding: 0px;
+	width: 88px;
+	height: 31px;
+	display: block;
+	background: url(img/validadorXHTML1.png) center left no-repeat;
+	float: left;
+}
+
+/*******************************************/
