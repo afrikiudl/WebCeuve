@@ -1,314 +1,313 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link rel="stylesheet" type="text/css" href="css/estilo.css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" type="text/css" href="css/estilo.css" />
 
-<!-- <script type="text/javascript" src="js/wforms.js"></script> -->
+    <!-- <script type="text/javascript" src="js/wforms.js"></script> -->
 
-	<script language="JavaScript"> 
-	
-	
-		<!--
-		if(document.getElementById){  // si se trata de Netscape 6
-				Refcapa='document.getElementById("'
-				Refestilo='").style'
-				Reftop='.top'
-				Refleft='.left'
-		}else if(document.layers){ // si se trata de Netscape 4
-				Refcapa='document.'
-				Refestilo=''
-				Reftop='.top'
-				Refleft='.left'
-		}else if(document.all){ // si se trata de Internet Explorer 4
-				Refcapa=''
-				Refestilo='.style'
-				Reftop='.pixelTop'
-				Refleft='.pixelLeft'
-		}
-		
-		function mostrarcapa(capa){
-			eval(Refcapa+capa+Refestilo+'.visibility="visible"');
-			}  
-		
-		function ocultarcapa(capa){
-			eval(Refcapa+capa+Refestilo+'.visibility="hidden"');
-			}
-		// -->
-		
-		
-		// FORMULARIO	
-	
-		function validarInfo(){		/* se encarga de validar todos los campos */	
+    <script language="JavaScript">
+        <!--
+        if (document.getElementById) { // si se trata de Netscape 6
+            Refcapa = 'document.getElementById("'
+            Refestilo = '").style'
+            Reftop = '.top'
+            Refleft = '.left'
+        } else if (document.layers) { // si se trata de Netscape 4
+            Refcapa = 'document.'
+            Refestilo = ''
+            Reftop = '.top'
+            Refleft = '.left'
+        } else if (document.all) { // si se trata de Internet Explorer 4
+            Refcapa = ''
+            Refestilo = '.style'
+            Reftop = '.pixelTop'
+            Refleft = '.pixelLeft'
+        }
 
-			ocultaTodasCapas()
-	
-			if (document.formulariInfo.nombreRemitente.value==""){
-						alert("Falta escribir el nombre y apellido");
-						mostrarcapa('msgErrNombre')
-						document.formulariInfo.nombreRemitente.focus();	
-						return (false);	
-					}
-				else
-				{
-				  if (document.formulariInfo.nombreEmpresa.value==""){
-							alert("Falta escribir el nombre de la empresa");	
-							mostrarcapa('msgErrEmp');
-							document.formulariInfo.nombreEmpresa.focus();		
-							return (false);	
-						}
-					else
-					{					
-						if (document.formulariInfo.direccionEMail.value==""){
-								alert("Falta escribir el e-mail");	
-								mostrarcapa('msgErrEmail');
-								document.formulariInfo.direccionEMail.focus();		
-								return (false);	
-							}
-						else
-						{
-							if (document.formulariInfo.telefono.value==""){
-								alert("Falta escribir el telefono");
-								 mostrarcapa('msgErrTelf');		
-								document.formulariInfo.telefono.focus();		
-								return (false);	
-							}
-							else							
-							{
-									if (document.formulariInfo.mensaje.value==""){
-										alert("Falta escribir el mensaje");
-										 mostrarcapa('msgErrMensaje');		
-										document.formulariInfo.mensaje.focus();		
-										return (false);	
-									}
-										else
-											return (true);
-							}
-						}
-					}
-			}					
-		}/* cierra la funcion de validarInfo */	
-		
-		function enviarFormularioSinEnter() 
-		{		
-			if(validarInfo())
-			{
-				<!--<form method="post" action="http://forms.melodysoft.com"  name="formulariInfo">--><!-- onSubmit="return (validarInfo())">-->					
-				document.formulariInfo.method="post";
-				<!-- document.formulariInfo.action="http://forms.melodysoft.com"; -->
-				document.formulariInfo.name="formulariInfo";			
-				document.formulariInfo.submit();						
-			}
-		}
+        function mostrarcapa(capa) {
+            eval(Refcapa + capa + Refestilo + '.visibility="visible"');
+        }
+
+        function ocultarcapa(capa) {
+            eval(Refcapa + capa + Refestilo + '.visibility="hidden"');
+        }
+        // -->
 
 
-		function ocultaTodasCapas() {
-			
-			 ocultarcapa('msgErrNombre');
-			 ocultarcapa('msgErrEmp');
-			 ocultarcapa('msgErrEmail');
-			 ocultarcapa('msgErrTelf');	
-			 ocultarcapa('msgErrMensaje');		
-			 	 			 
-			}
-			
-			
-				// capa visible
-			//	document.all["c1"].style.visibility = "visible";
-			//	document.all["c1"].style.display = "block";
-				
-				//capa invisible
-			//	document.all["c2"].style.visibility = "hidden";
-			//	document.all["c2"].style.display = "none";
-			
-			// se ocultan todas las capas 
-		//		document.all["msgErrNombre"].style.visibility = "hidden";
-		//		document.all["msgErrNombre"].style.display = "none";
+        // FORMULARIO	
 
-				//document.all["msgErrEmpresa"].style.visibility = "hidden";
-				//document.all["msgErrEmpresa"].style.display = "none";
-	
-		//		document.all["msgErrEmail"].style.visibility = "hidden";
-		//		document.all["msgErrEmail"].style.display = "none";
+        function validarInfo() { /* se encarga de validar todos los campos */
 
-		//		document.all["msgErrTelf"].style.visibility = "hidden";
-			//	document.all["msgErrTelf"].style.display = "none";
+            ocultaTodasCapas()
 
-				//document.all["msgErrMensaje"].style.visibility = "hidden";
-				//document.all["msgErrMensaje"].style.display = "none";
-		
-			
-			//}
+            if (document.formulariInfo.nombreRemitente.value == "") {
+                alert("Falta escribir el nombre y apellido");
+                mostrarcapa('msgErrNombre')
+                document.formulariInfo.nombreRemitente.focus();
+                return (false);
+            } else {
+                if (document.formulariInfo.nombreEmpresa.value == "") {
+                    alert("Falta escribir el nombre de la empresa");
+                    mostrarcapa('msgErrEmp');
+                    document.formulariInfo.nombreEmpresa.focus();
+                    return (false);
+                } else {
+                    if (document.formulariInfo.direccionEMail.value == "") {
+                        alert("Falta escribir el e-mail");
+                        mostrarcapa('msgErrEmail');
+                        document.formulariInfo.direccionEMail.focus();
+                        return (false);
+                    } else {
+                        if (document.formulariInfo.telefono.value == "") {
+                            alert("Falta escribir el telefono");
+                            mostrarcapa('msgErrTelf');
+                            document.formulariInfo.telefono.focus();
+                            return (false);
+                        } else {
+                            if (document.formulariInfo.mensaje.value == "") {
+                                alert("Falta escribir el mensaje");
+                                mostrarcapa('msgErrMensaje');
+                                document.formulariInfo.mensaje.focus();
+                                return (false);
+                            } else
+                                return (true);
+                        }
+                    }
+                }
+            }
+        } /* cierra la funcion de validarInfo */
+
+        function enviarFormularioSinEnter() {
+            if (validarInfo()) {
+                <!--<form method="post" action="http://forms.melodysoft.com"  name="formulariInfo">--><!-- onSubmit="return (validarInfo())">-->					
+                document.formulariInfo.method = "post";
+                <!-- document.formulariInfo.action="http://forms.melodysoft.com"; -->
+                document.formulariInfo.name = "formulariInfo";
+                document.formulariInfo.submit();
+            }
+        }
 
 
+        function ocultaTodasCapas() {
 
-</script>
+            ocultarcapa('msgErrNombre');
+            ocultarcapa('msgErrEmp');
+            ocultarcapa('msgErrEmail');
+            ocultarcapa('msgErrTelf');
+            ocultarcapa('msgErrMensaje');
+
+        }
+
+
+        // capa visible
+        //	document.all["c1"].style.visibility = "visible";
+        //	document.all["c1"].style.display = "block";
+
+        //capa invisible
+        //	document.all["c2"].style.visibility = "hidden";
+        //	document.all["c2"].style.display = "none";
+
+        // se ocultan todas las capas 
+        //		document.all["msgErrNombre"].style.visibility = "hidden";
+        //		document.all["msgErrNombre"].style.display = "none";
+
+        //document.all["msgErrEmpresa"].style.visibility = "hidden";
+        //document.all["msgErrEmpresa"].style.display = "none";
+
+        //		document.all["msgErrEmail"].style.visibility = "hidden";
+        //		document.all["msgErrEmail"].style.display = "none";
+
+        //		document.all["msgErrTelf"].style.visibility = "hidden";
+        //	document.all["msgErrTelf"].style.display = "none";
+
+        //document.all["msgErrMensaje"].style.visibility = "hidden";
+        //document.all["msgErrMensaje"].style.display = "none";
+
+
+        //}
+    </script>
 
 
 
 
-<title>CeuVe - Art&iacute;culos Publicitarios | Imprenta Textil</title>
+    <title>CeuVe - Art&iacute;culos Publicitarios | Imprenta Textil</title>
 
 
 </head>
 
 <body onload="javascript:ocultaTodasCapas()">
 
-<div id="pagina">
-	
-<!-- MENU CABECERA ****************************************************************************************** -->
-	<div id="cabecera_enRojo">	
-		<div id="cabecera">		
-			<div id="logo">
-				<a class="logo" href="index.html" title="Enlace a la p&aacute;gina principal"><img src="imagenes/logoCEUVE.jpg" alt="Logo de CEUVE" /></a>
-			</div>
-	
-			<div id="linksSuperiores">
-				 <a class="mapaWeb" href="mapaWeb.html" title="Mapa web de CeuVe"></a> 
-				 <a class="contact" href="contacto.html" title="Contacta con CeuVe"></a> 
-				 <a class="home" href="index.html" title="Inicio de CeuVe"></a> 
-			</div> <!-- linksSuperiores -->
-	
-			<div id="barramenu">
-				<ul>
-					<li><a href="index.html" title="Inicio">Inicio</a></li>
-					<li><a href="empresa.html" title="Empresa">Empresa</a></li>				
-					<li><a href="servicios.html" title="Servicios">Servicios</a></li>
-					<li>Contacto</li>
-				</ul>			
-			</div> <!-- barramenu -->
-					
-		</div> <!-- cabecera -->
-		
-	<!-- MENU CABECERA ****************************************************************************************** -->
-	
-	<!-- IMAGEN CABECERA ****************************************************************************************** -->
-	
-		<div id="imgCabecera">
-			<img src="imagenes/imgContacto.jpg" alt="Camisetas"/>		
-		</div> <!-- imgCabecera -->
+    <div id="pagina">
+
+        <!-- MENU CABECERA ****************************************************************************************** -->
+        <div id="cabecera_enRojo">
+            <div id="cabecera">
+                <div id="logo">
+                    <a class="logo" href="index.html" title="Enlace a la p&aacute;gina principal"><img src="imagenes/logoCEUVE.jpg" alt="Logo de CEUVE" /></a>
+                </div>
+
+                <div id="linksSuperiores">
+                    <a class="mapaWeb" href="mapaWeb.html" title="Mapa web de CeuVe"></a>
+                    <a class="contact" href="contacto.html" title="Contacta con CeuVe"></a>
+                    <a class="home" href="index.html" title="Inicio de CeuVe"></a>
+                </div>
+                <!-- linksSuperiores -->
+
+                <div id="barramenu">
+                    <ul>
+                        <li><a href="index.html" title="Inicio">Inicio</a></li>
+                        <li><a href="empresa.html" title="Empresa">Empresa</a></li>
+                        <li><a href="servicios.html" title="Servicios">Servicios</a></li>
+                        <li>Contacto</li>
+                    </ul>
+                </div>
+                <!-- barramenu -->
+
+            </div>
+            <!-- cabecera -->
+
+            <!-- MENU CABECERA ****************************************************************************************** -->
+
+            <!-- IMAGEN CABECERA ****************************************************************************************** -->
+
+            <div id="imgCabecera">
+                <img src="imagenes/imgContacto.jpg" alt="Camisetas" />
+            </div>
+            <!-- imgCabecera -->
 
 
-<!-- IMAGEN CABECERA ****************************************************************************************** -->
-	</div>
-
-		
-		
-<!-- CONTENIDO CUERPO ****************************************************************************************** -->
-	
-	
-	<div id="contenido">   
-	<div id="migas">
-		<a href="index.html" title="Inicio">Inicio</a> >> Contacto
-	</div>
-	<div id="contenido_der">
-		<h2> Encuentranos en: </h2>
-		<center>
-			<p><strong>Ceuve, S.L</strong><br />
-			C/ Arquitecto Gaud&iacute;, 7<br />
-			22520 Fraga (Huesca)<br />
-			Tel / Fax. 974 47 19 59 <br />
-			<!--E-mail. --><a href="mailto:ceuve13@telefonica.net" title="e-mail de CeuVe">ceuve13@telefonica.net</a> <br />
-			<br /><br />
-				<a href="http://maps.google.es/maps?f=q&hl=es&geocode=&q=arquitecto+gaudi+fraga&sll=41.545589,0.348816&sspn=0.432704,1.2854&ie=UTF8&ll=41.520017,0.336199&spn=0.027055,0.080338&z=14&om=1" title="direccion desde google maps" target="_blank">
-				<img src="imagenes/mapaSituacion_p.jpg"/>
-				</a>
-			</p>
-		</center>
-	</div> <!-- contenido_der -->
-	
-	
-	<div id="contenido_izq">
-		<h2> Formulario de contacto</h2>
-		<div id="formulario">
-		<!-- <p>Contacte con nosotros enviando el siguiente formulario:</p>  -->
-		<!--form method="post" action="http://forms.melodysoft.com"  name="formulariInfo"> --><!-- onSubmit="return (validarInfo())">-->
-		<!-- <form method="post" action="#"  name="formulariInfo">--><!-- onSubmit="return (validarInfo())">-->
-		<form name="formulariInfo" onSubmit="return(false)">
-		
-				<input type="hidden" name="id" value="infoCeuve">
-				<div class="formColumnas">
-					<div class="elementoForm">												
-						<label for="nombreRemitente"> &nbsp;  &nbsp; &nbsp;  Nombre (*)</label> <br /> 	<div id=msgErrNombre>.</div> 	
-						<input class="input" id="nombreRemitente" name="nombreRemitente" type="text" size="20" maxlength="20"  onkeyup="fn(this.form,this)"/>
-						
-					</div>
-
-					<div class="elementoForm">						
-						<label for="empresaRemitente"> &nbsp;  &nbsp; &nbsp; Empresa (*)</label><br /> <div id=msgErrEmp>.</div>
-						<input class="input" id="nombreEmpresa" name="nombreEmpresa" type="text" size="28" maxlength="28"  onkeyup="fn(this.form,this)"/>
-					</div>
-				</div> <!-- formColumnas -->
-				<br /><br />
-				<div class="formColumnas">						
-					<div class="elementoForm">
-						<label for="direccionCorreo"> &nbsp;  &nbsp; &nbsp; E-mail. (*) </label><br /> 	<div id=msgErrEmail>.</div>					
-						<input class="input" id="direccionEMail" name="direccionEMail" type="text" size="28" maxlength="28"  onkeyup="fn(this.form,this)" />
-						
-					</div>
-			
-					<div class="elementoForm">						
-						<label for="telfRemitente"> &nbsp; &nbsp;  &nbsp; Tel. (*) </label><br /> 			 <div id=msgErrTelf>.</div>			
-						<input class="input" id="telefono" name="telefono" type="text" size="28" maxlength="28"  onkeyup="fn(this.form,this)" />
-						
-					</div>					
-				</div> <!-- formColumnas -->
-				<br /><br /><br />
-				<label for="msge"> &nbsp;  &nbsp; &nbsp; Mensaje (*)</label><br /> <div id=msgErrMensaje>.</div> 
-				<textarea class="textarea" id="mensaje" name="mensaje" cols="15" rows="11"  onkeyup="fn(this.form,this)"></textarea>
-				<br />
-				<p>
-				<input class="boton" type="reset" value="Borrar" onclick="ocultaTodasCapas()"/>
-				<input class="boton" type="submit" value="Enviar"  onclick="enviarFormularioSinEnter()"/> 				
-				</p>
-				<br /><br />
-								
-		</form>
-		</div><!-- formulario -->
-	</div> <!-- contenido_izq -->
+            <!-- IMAGEN CABECERA ****************************************************************************************** -->
+        </div>
 
 
-	<br /><br /><br /><br /><br />
-	</div> <!-- contenido -->
+
+        <!-- CONTENIDO CUERPO ****************************************************************************************** -->
 
 
-<!-- CONTENIDO CUERPO ****************************************************************************************** -->
+        <div id="contenido">
+            <div id="migas">
+                <a href="index.html" title="Inicio">Inicio</a> >> Contacto
+            </div>
+            <div id="contenido_der">
+                <h2> Encuentranos en: </h2>
+                <center>
+                    <p><strong>Ceuve, S.L</strong><br /> C/ La calle, numero x <br /> 00008 Ciudad (Provincia)<br /> Tel / Fax. 974 47 00 00 <br />
+                        <!--E-mail. --><a href="mailto:ceuve13@telefonica.net" title="e-mail de CeuVe">info@gmail.com</a> <br />
+                        <br /><br />
+                        <a href="http://maps.google.es/maps?f=q&hl=es&geocode=&q=arquitecto+gaudi+fraga&sll=41.545589,0.348816&sspn=0.432704,1.2854&ie=UTF8&ll=41.520017,0.336199&spn=0.027055,0.080338&z=14&om=1" title="direccion desde google maps" target="_blank">
+                            <img src="imagenes/mapaSituacion_p.jpg" />
+                        </a>
+                    </p>
+                </center>
+            </div>
+            <!-- contenido_der -->
 
-<!-- PIE        ****************************************************************************************** -->
 
-	<div id="pie">
-		<div id="pieDer">
-				 <a class="xhtml" href="http://validator.w3.org/check?uri=referer" title="Validate XHTML"></a> 
-				<!--
+            <div id="contenido_izq">
+                <h2> Formulario de contacto</h2>
+                <div id="formulario">
+                    <!-- <p>Contacte con nosotros enviando el siguiente formulario:</p>  -->
+                    <!--form method="post" action="http://forms.melodysoft.com"  name="formulariInfo"> -->
+                    <!-- onSubmit="return (validarInfo())">-->
+                    <!-- <form method="post" action="#"  name="formulariInfo">-->
+                    <!-- onSubmit="return (validarInfo())">-->
+                    <form name="formulariInfo" onSubmit="return(false)">
+
+                        <input type="hidden" name="id" value="infoCeuve">
+                        <div class="formColumnas">
+                            <div class="elementoForm">
+                                <label for="nombreRemitente"> &nbsp;  &nbsp; &nbsp;  Nombre (*)</label> <br />
+                                <div id=msgErrNombre>.</div>
+                                <input class="input" id="nombreRemitente" name="nombreRemitente" type="text" size="20" maxlength="20" onkeyup="fn(this.form,this)" />
+
+                            </div>
+
+                            <div class="elementoForm">
+                                <label for="empresaRemitente"> &nbsp;  &nbsp; &nbsp; Empresa (*)</label><br />
+                                <div id=msgErrEmp>.</div>
+                                <input class="input" id="nombreEmpresa" name="nombreEmpresa" type="text" size="28" maxlength="28" onkeyup="fn(this.form,this)" />
+                            </div>
+                        </div>
+                        <!-- formColumnas -->
+                        <br /><br />
+                        <div class="formColumnas">
+                            <div class="elementoForm">
+                                <label for="direccionCorreo"> &nbsp;  &nbsp; &nbsp; E-mail. (*) </label><br />
+                                <div id=msgErrEmail>.</div>
+                                <input class="input" id="direccionEMail" name="direccionEMail" type="text" size="28" maxlength="28" onkeyup="fn(this.form,this)" />
+
+                            </div>
+
+                            <div class="elementoForm">
+                                <label for="telfRemitente"> &nbsp; &nbsp;  &nbsp; Tel. (*) </label><br />
+                                <div id=msgErrTelf>.</div>
+                                <input class="input" id="telefono" name="telefono" type="text" size="28" maxlength="28" onkeyup="fn(this.form,this)" />
+
+                            </div>
+                        </div>
+                        <!-- formColumnas -->
+                        <br /><br /><br />
+                        <label for="msge"> &nbsp;  &nbsp; &nbsp; Mensaje (*)</label><br />
+                        <div id=msgErrMensaje>.</div>
+                        <textarea class="textarea" id="mensaje" name="mensaje" cols="15" rows="11" onkeyup="fn(this.form,this)"></textarea>
+                        <br />
+                        <p>
+                            <input class="boton" type="reset" value="Borrar" onclick="ocultaTodasCapas()" />
+                            <input class="boton" type="submit" value="Enviar" onclick="enviarFormularioSinEnter()" />
+                        </p>
+                        <br /><br />
+
+                    </form>
+                </div>
+                <!-- formulario -->
+            </div>
+            <!-- contenido_izq -->
+
+
+            <br /><br /><br /><br /><br />
+        </div>
+        <!-- contenido -->
+
+
+        <!-- CONTENIDO CUERPO ****************************************************************************************** -->
+
+        <!-- PIE        ****************************************************************************************** -->
+
+        <div id="pie">
+            <div id="pieDer">
+                <a class="xhtml" href="http://validator.w3.org/check?uri=referer" title="Validate XHTML"></a>
+                <!--
 				  <p>
 					<a href="http://validator.w3.org/check?uri=referer">
 					<img src="http://www.w3.org/Icons/valid-xhtml10"
 						alt="Valid XHTML 1.0 Transitional" height="31" width="88" /></a>
 				  </p> -->
-				
-			</div>
-			<div id="pieIzq">
-				<a class="css" href="#" title="Validate CSS"></a>
-			</div>
-			<div id="pieMenu">
-				<p>
-					<a href="index.html" title="Inicio">Inicio</a> | 
-					<a href="empresa.html" title="Empresa">Empresa</a> | 
-					<a href="servicios.html" title="Servicios">Servicios</a> | 
-					<a href="contacto.html" title="Contacto">Contacto</a>
-				</p>	
-			</div>
-			<div id="infoEmpresa">
-				<p>Ceuve | Tel/fax: 974 47 19 59| e-mail: ceuve13@telefonica.net
-				<br/>
-				© 2007 Ceuve, S.L. Todos los derechos reservados.</p>
-			</div>
-	</div>	
 
-<!-- PIE        ****************************************************************************************** -->
-</div> 
-<!-- pagina -->
+            </div>
+            <div id="pieIzq">
+                <a class="css" href="#" title="Validate CSS"></a>
+            </div>
+            <div id="pieMenu">
+                <p>
+                    <a href="index.html" title="Inicio">Inicio</a> |
+                    <a href="empresa.html" title="Empresa">Empresa</a> |
+                    <a href="servicios.html" title="Servicios">Servicios</a> |
+                    <a href="contacto.html" title="Contacto">Contacto</a>
+                </p>
+            </div>
+            <div id="infoEmpresa">
+                <p>Ceuve | Tel/fax: 974 47 00 00| e-mail: xxx@gmail.com
+                    <br/> ï¿½ 2007 Ceuve, S.L. Todos los derechos reservados.</p>
+            </div>
+        </div>
+
+        <!-- PIE        ****************************************************************************************** -->
+    </div>
+    <!-- pagina -->
 
 
 </body>
+
 </html>
